@@ -1,0 +1,50 @@
+.content{
+    padding: 40px 0;
+    background-color: $letter-text;
+    text-align: center;
+    .container{
+        p{
+            color: $heading-color;
+            margin-bottom: 15px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px){
+    .content{
+        padding: 80px 0;
+        text-align: center;
+        .content-text{
+            width: 550px;
+            margin: 0 auto;
+            h2{
+                font-size: 3rem;
+            }
+            p{
+                width: 465px;
+                margin: 0 auto 15px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1300px){
+    .content{
+        padding: 149px 0 58px;
+        .content-text{
+            width: 750px;
+            margin: 0 auto;
+            h2{
+                font-size: 4.8rem;
+                margin-bottom: 32px;
+            }
+            p{
+                font-size: 2rem;
+                width: 620px;
+            }
+        }
+    }
+}

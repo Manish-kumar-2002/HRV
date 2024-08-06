@@ -1,0 +1,48 @@
+.oneliner-w-button{
+    background-color: $humburger-color;
+    padding: 40px 0;
+    position: relative;
+    z-index: 2;
+    .container{
+        text-align: center;
+        h2{
+            color: $letter-text;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (min-width:768px){
+    .oneliner-w-button{
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h2{
+                margin-bottom: 0;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1300px){
+    .oneliner-w-button{
+        padding: 87px 0 77px 0;
+
+        .container{
+            justify-content: space-between;
+            padding-right: 0;
+            h2{
+                font-size: 4rem;
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
+            .btn{
+                min-width: 382px;
+                font-size: 2rem;
+                padding: 24px 0;
+            }
+        }
+    }
+}

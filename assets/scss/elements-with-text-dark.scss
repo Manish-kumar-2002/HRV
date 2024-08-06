@@ -1,0 +1,632 @@
+.elements-with-text-dark {
+  padding: 30px 0;
+  background-color: #9ca4b5;
+  .left-block {
+    margin-bottom: 50px;
+  }
+  .circle-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 282px;
+    margin: 0 auto;
+    .logo-block {
+      width: 60px;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    .circle-inner {
+      text-align: center;
+      color: #fff;
+      font-family: "robotomedium", sans-serif;
+    }
+    .circle-outer {
+      height: 95px;
+      width: 102px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url(../images/circle-outer-dot.png) 0 0 no-repeat;
+        background-size: cover;
+      }
+    }
+    .circle-wrap {
+      position: absolute;
+
+      &.right {
+        right: 0;
+        .circle-outer {
+          &:first-child {
+            &::after {
+              transform: rotate(115deg);
+            }
+          }
+          &:last-child {
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+      &.left {
+        left: 0;
+        .circle-outer {
+          &:last-child {
+            &::after {
+              transform: rotate(-64deg);
+            }
+          }
+        }
+      }
+      &.top {
+        top: 0;
+        .circle-outer {
+          &::after {
+            transform: rotate(58deg);
+          }
+        }
+      }
+      &.bottom {
+        bottom: 0;
+        .circle-outer {
+          &::after {
+            transform: rotate(-122deg);
+          }
+        }
+      }
+    }
+  }
+  .number {
+    position: absolute;
+    z-index: 2;
+    width: 10px;
+    font-size: 1.3rem;
+    color: #fff;
+    font-family: "robotomedium", sans-serif;
+    &.number1 {
+      right: 4px;
+      top: 21px;
+    }
+    &.number2 {
+      top: 64px;
+      right: 7px;
+    }
+    &.number3 {
+      bottom: -6px;
+      left: 3px;
+      right: 0;
+      margin: 0 auto;
+    }
+    &.number4 {
+      bottom: 20px;
+      left: 6px;
+    }
+    &.number5 {
+      left: 10px;
+      top: 16px;
+    }
+    &.number6 {
+      top: -5px;
+      right: 0;
+      left: 4px;
+      margin: 0 auto;
+    }
+  }
+  .right-block {
+    h2 {
+      font-size: 3.1rem;
+      font-weight: $fw-light;
+    }
+    h3 {
+      color: #ced2da;
+      text-transform: uppercase;
+    }
+    .btn {
+      background-color: #0a1f46;
+      &:hover {
+        background-color: transparent;
+        border: 1px solid #0a1f46;
+      }
+    }
+  }
+  &.element-dark {
+    .left-block {
+      width: 280px;
+      margin: 0 auto 40px;
+      position: relative;
+      img {
+        width: 100%;
+        display: block;
+        z-index: -1;
+      }
+    }
+    .round {
+      height: 40px;
+      width: 40px;
+      background: #0a1f46;
+      border-radius: 50%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s linear;
+      cursor: pointer;
+      &.one {
+        top: 8px;
+        left: 70px;
+      }
+      &.two {
+        top: 8px;
+        right: 70px;
+      }
+      &.three {
+        top: 86px;
+        right: 8px;
+      }
+      &.four {
+        bottom: 51px;
+        right: 30px;
+      }
+      &.five {
+        bottom: 7px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+      }
+      &.six {
+        bottom: 50px;
+        left: 30px;
+      }
+      &.seven {
+        top: 86px;
+        left: 8px;
+      }
+    }
+    .number {
+      position: static;
+      background-color: transparent;
+      width: auto;
+    }
+    .circle_logo {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      .c-logo {
+        width: 60px;
+        display: block;
+        margin: 0 auto 5px;
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+      .logo-text {
+        font-weight: $fw-medium;
+        color: #fff;
+        font-size: 1.2rem;
+      }
+    }
+    .element-content {
+      width: 280px;
+      margin: 0 auto;
+      h2 {
+        font-weight: $fw-light;
+        color: $text-color;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-weight: $fw-regular;
+        color: $outer-color;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        background-color: $text-color;
+        color: $white;
+      }
+    }
+
+    .element-list {
+      li {
+        color: $white;
+        font-family: "robotolight" , sans-serif;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        list-style: block;
+        counter-increment: my-awesome-counter;
+        display: block;
+        transition: all 0.2s linear;
+        cursor: pointer;
+        &::before {
+          content: counter(my-awesome-counter) ".";
+          color: $white;
+          font-weight: bold;
+          margin-right: 7px;
+        }
+      }
+    }
+    .zoom{
+      transform: scale(1.2);
+    }
+  }
+}
+@media (min-width: 375px) and (max-width: 499px) {
+  .elements-with-text-dark {
+    .circle-wrapper {
+      width: 335px;
+      height: 354px;
+      .logo-block {
+        width: 84px;
+      }
+      .circle-outer {
+        height: 119px;
+        width: 127px;
+      }
+      .circle-wrap {
+        &.right {
+          .circle-outer {
+            &:first-child {
+              &::after {
+                transform: rotate(116deg);
+              }
+            }
+          }
+        }
+      }
+    }
+    .number.number1 {
+      right: 7px;
+      top: 29px;
+    }
+    .number.number2 {
+      top: 82px;
+      right: 11px;
+    }
+    .number.number3 {
+      bottom: -5px;
+      left: 0px;
+    }
+    .number.number4 {
+      bottom: 27px;
+      left: 9px;
+    }
+    .number.number5 {
+      left: 12px;
+      top: 22px;
+    }
+    .number.number6 {
+      top: -3px;
+      left: 3px;
+    }
+    .circle-wrapper .circle-inner {
+      font-size: 1.1rem;
+    }
+  }
+}
+@media screen and (min-width:375px) and (max-width:1299px) {
+  .elements-with-text-dark{
+    &.element-dark {
+      .number {
+        font-size: 2rem;
+      }
+      .left-block {
+        width: 330px;
+      }
+      .round {
+        height: 47px;
+        width: 47px;
+        &.one {
+          top: 9px;
+          left: 82px;
+        }
+        &.two {
+          top: 9px;
+          right: 83px;
+        }
+        &.three {
+          top: 101px;
+          right: 9px;
+        }
+        &.four {
+          bottom: 60px;
+          right: 35px;
+        }
+        &.five {
+          bottom: 9px;
+        }
+        &.six {
+          bottom: 60px;
+          left: 35px;
+        }
+        &.seven {
+          top: 101px;
+          left: 9px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 500px) and (max-width: 1299px) {
+  .elements-with-text-dark {
+    .circle-wrapper {
+      width: 351px;
+      height: 368px;
+      .logo-block {
+        width: 84px;
+      }
+      .circle-outer {
+        height: 124px;
+        width: 133px;
+      }
+    }
+    .number.number1 {
+      right: 8px;
+      top: 30px;
+    }
+    .number.number2 {
+      top: 87px;
+      right: 12px;
+    }
+    .number.number3 {
+      bottom: -3px;
+      left: 3px;
+    }
+    .number.number4 {
+      bottom: 30px;
+      left: 10px;
+    }
+    .number.number5 {
+      left: 13px;
+      top: 22px;
+    }
+    .number.number6 {
+      top: -4px;
+      left: 4px;
+    }
+    .circle-wrapper .circle-inner {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .elements-with-text-dark {
+    padding: 60px 0;
+    .container {
+      display: flex;
+      align-items: center;
+      max-width: 1078px;
+    }
+    .left-block {
+      width: 50%;
+      margin-bottom: 0;
+      padding-right: 30px;
+    }
+    .right-block {
+      width: 50%;
+      padding-left: 30px;
+    }
+    &.element-dark {
+      .container {
+        justify-content: center;
+      }
+      .left-block {
+        padding-right: 0;
+        margin: 0;
+        margin-right: 50px;
+      }
+      .element-content{
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .elements-with-text-dark {
+    padding: 150px 0 167px;
+    .container {
+      align-items: flex-start;
+    }
+    .circle-wrapper {
+      margin: 0;
+      height: 549px;
+      width: 515px;
+      .logo-block {
+        width: 119px;
+      }
+      .circle-outer {
+        height: 184px;
+        width: 196px;
+      }
+      .circle-wrap {
+        &.right {
+          .circle-outer {
+            &:first-child {
+              &::after {
+                transform: rotate(116.2deg);
+              }
+            }
+            &:last-child {
+              &::after {
+                transform: rotate(179.8deg);
+              }
+            }
+          }
+        }
+        &.left {
+          .circle-outer {
+            &:first-child {
+              &::after {
+                transform: rotate(-1.6deg);
+              }
+            }
+            &:last-child {
+              &::after {
+                transform: rotate(-62.3deg);
+              }
+            }
+          }
+        }
+        &.bottom {
+          .circle-outer {
+            &::after {
+              transform: rotate(-122.4deg);
+            }
+          }
+        }
+        &.top {
+          .circle-outer {
+            &::after {
+              transform: rotate(58.9deg);
+            }
+          }
+        }
+      }
+      .circle-inner {
+        font-size: 1.6rem;
+      }
+    }
+    .number {
+      font-size: 2.2rem;
+      &.number1 {
+        right: 16px;
+        top: 40px;
+      }
+      &.number2 {
+        top: auto;
+        right: 22px;
+        bottom: 31px;
+      }
+      &.number3 {
+        top: auto;
+        left: -6px;
+        bottom: -8px;
+      }
+      &.number4 {
+        top: auto;
+        right: auto;
+        left: 12px;
+        bottom: 41px;
+      }
+      &.number5 {
+        left: 18px;
+        top: 32px;
+      }
+      &.number6 {
+        top: -7px;
+      }
+    }
+    .right-block {
+      padding-left: 131px;
+      padding-top: 113px;
+      h2 {
+        font-size: 4.8rem;
+      }
+      h3 {
+        letter-spacing: 1px;
+        margin-bottom: 26px;
+      }
+      p {
+        margin-bottom: 40px;
+      }
+      .btn {
+        padding: 23px 42px;
+      }
+    }
+    &.element-dark {
+      padding: 173px 0 155px;
+      .left-block {
+        margin: 0;
+        width: 560px;
+        margin-left: 25px;
+      }
+      .round {
+        height: 72px;
+        width: 72px;
+        &.one {
+          top: 17px;
+          left: 133px;
+        }
+        &.two {
+          top: 16px;
+          right: 135px;
+        }
+        &.three {
+          top: 165px;
+          right: 16px;
+        }
+        &.four {
+          bottom: 98px;
+          right: 58px;
+        }
+        &.five {
+          bottom: 16px;
+        }
+        &.six {
+          bottom: 98px;
+          left: 58px;
+        }
+        &.seven {
+          top: 165px;
+          left: 15px;
+        }
+      }
+      .number {
+        font-size: 2.7rem;
+        width: auto;
+      }
+      .circle_logo {
+        .c-logo {
+          width: 111px;
+          margin-bottom: 19px;
+        }
+        .logo-text {
+          font-size: 1.6rem;
+        }
+      }
+      .element-content {
+        width: 500px;
+        padding-left: 162px;
+        padding-top: 15px;
+        h2 {
+          font-size: 4.8rem;
+          margin-bottom: 24px;
+        }
+
+        h3 {
+          font-size: 2.7rem;
+          letter-spacing: 1px;
+          margin-bottom: 27px;
+        }
+      }
+
+      .element-list {
+        li {
+          font-size: 2rem;
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.threecolumns {
+    background-color: $threecolumn-color;
+    padding: 40px 0;
+    text-align: center;
+
+    .container {
+        h2 {
+            font-family: "robotolight", sans-serif;
+            margin-bottom: 20px;
+        }
+        .symbols-block {
+            li {
+                position: relative;
+                margin-bottom: 35px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .symbol-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $heading-color;
+            font-size: 2rem;
+            font-weight: $fw-regular;
+            transition: all .5s;
+            font-family: "robotoregular", sans-serif;
+            &:hover{
+                i{
+                    filter: brightness(0);
+                }
+            }
+        }
+
+        .icon-financial {
+            background-size: 500px 500px;
+            width: 71px;
+            height: 65px;
+            margin-bottom: 10px;
+        }
+
+        .icon-wages {
+            background-size: 500px 500px;
+            width: 53px;
+            height: 65px;
+            background-position: -2px -70px;
+            margin-bottom: 10px;
+        }
+
+        .icon-travel {
+            background-size: 500px 500px;
+            width: 68px;
+            height: 65px;
+            background-position: 0 -141px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .threecolumns {
+        padding: 70px 0;
+
+        .container {
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 40px;
+            }
+
+            .symbols-block {
+                display: flex;
+                justify-content: center;
+                li {
+                    margin-bottom: 0;
+                    padding: 0 35px;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+
+                    &:not(:last-child)::before {
+                        content: '';
+                        @include absolute($top: 0, $right: -12px);
+                        width: 2px;
+                        height: 100%;
+                        background-color: $line-after;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1300px) {
+    .threecolumns {
+        padding: 133px 0 166px 0;
+
+        .container {
+            h2 {
+                font-size: 4.8rem;
+                margin-bottom: 75px;
+            }
+
+           .symbols-block{
+            li{
+                padding: 0 123px ;
+                &:not(:last-child)::before {
+                    @include absolute($top: 0, $right: -7px);
+                }
+            }
+            .icon-financial{
+                margin-bottom: 29px;
+            }
+            .icon-wages{
+                margin-bottom: 30px;
+            }
+            .icon-travel{
+                margin-bottom: 29px;
+            }
+           }
+           .symbol-text{
+            letter-spacing: -0.1px;
+           }
+        }
+    }
+}

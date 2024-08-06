@@ -1,0 +1,74 @@
+.letter_backgroundimage {
+  background: url(../images/banner-2.jpg) no-repeat center top;
+  background-size: cover;
+  object-fit: cover;
+  padding: 80px 0 40px;
+  .letter-wrapper{
+    overflow: hidden;
+    position: relative;
+    width: 213px;
+    &:before {
+        content: "";
+        top: 0;
+        right: 2px;
+        position: absolute;
+        width: 2px;
+        height:calc(100% - 5px);
+        background-color: #e7e9ed;
+      }
+  }
+  .letter-content {
+    width: 210px;
+    position: relative;
+    img {
+      width: 195px;
+      margin-bottom: 25px;
+    }
+    h3 {
+      color: $outer-color;
+      font-weight: $fw-regular;
+      text-transform: uppercase;
+    }
+    p{
+        margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .letter_backgroundimage {
+    background-position: 0 0;
+    .letter-wrapper{
+        width: 414px;
+    }
+    .letter-content {
+        width: 410px;
+        text-align: right;
+        padding-right: 13px;
+      img {
+        width: 250px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1300px) {
+  .letter_backgroundimage {
+    min-height: 997px;
+    padding: 164px 0 40px;
+    background-position: center top;
+    .letter-wrapper{
+        width: 412px;
+    }
+    .letter-content {
+      img {
+        width: 321px;
+        margin-bottom: 64px;
+      }
+      h3 {
+        font-size: 2.9rem;
+        margin-bottom: 19px;
+      }
+    }
+  }
+}

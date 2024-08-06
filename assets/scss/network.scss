@@ -1,0 +1,227 @@
+.network {
+  background-color: #f3f4f6;
+  padding: 10px 0 30px;
+  .container {
+    max-width: 1400px;
+  }
+  .content-box {
+    padding: 0 20px;
+    width: 238px !important;
+    margin: 0 auto;
+    display: block !important;
+    .content-logo {
+        &.one {
+          width: 211px;
+          margin-top: 30px;
+          margin-bottom: 51px;
+        }
+        &.two {
+          width: 155px;
+          margin-top: 0;
+          margin-bottom: 11px;
+        }
+        &.three {
+          width: 150px;
+          margin-top: 35px;
+          margin-bottom: 51px;
+        }
+        &.four {
+          width: 76px;
+          margin-top: 9px;
+          margin-bottom: 25px;
+        }
+    }
+    &:first-child {
+      h3{
+        margin-bottom: 16px;
+      }
+    }
+    &:nth-child(2) {
+      h3 {
+        margin-bottom: 16px;
+      }
+    }
+    &:nth-child(3) {
+      h3 {
+        margin-bottom: 16px;
+      }
+    }
+    &:last-child {
+      h3 {
+        margin-bottom: 16px;
+      }
+    }
+    
+    h3 {
+      font-family: 'robotomedium', sans-serif;
+      font-size: 2.2rem;
+      line-height: 1.1;
+    }
+    h4,
+    .location {
+      font-family: 'robotolight', sans-serif;
+      color: #58606d;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+    a {
+      font-size: 1.6rem;
+      font-family: 'robotomedium', sans-serif;
+      color: #041e4a;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .content-logo {
+    width: 120px;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+@media screen and (min-width:600px){
+  .network{
+    .slick-active{
+     .content-box{
+      position: relative;
+      width: auto !important;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 579px;
+        width: 1px;
+        background-color: #d0d4dc;
+      }
+     }
+    }
+    .slick-active + .slick-active{
+      .content-box{
+        &::after{
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .network {
+    padding: 10px 0 50px;
+    .slick-active + .slick-active{
+     .content-box{
+      margin: 0;
+      &::after {
+        display: block;
+      }
+     }
+    }
+    .slick-active + .slick-active + .slick-active{
+      .content-box{
+       &::after {
+         display: none;
+       }
+      }
+     }
+    .content-box {
+      margin: 0;
+      padding: 0 25px;
+      margin-bottom: 50px;
+      width: auto !important;
+      
+      &:nth-child(even) {
+        border-right: 0;
+      }
+      .listing {
+        li {
+          padding-left: 32px;
+          margin-bottom: 1px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width:1200px) {
+  .network{
+    .slick-active + .slick-active + .slick-active{
+      .content-box{
+       &::after {
+         display: block;
+       }
+      }
+     }
+     .slick-active + .slick-active + .slick-active + .slick-active{
+      .content-box{
+       &::after {
+         display: none;
+       }
+      }
+     }
+  }
+}
+@media screen and (min-width: 1300px) {
+  .network {
+    padding: 10px 0 189px;
+    .container {
+      display: block;
+    }
+    .content-box {
+      padding: 40px;
+      margin-bottom: 0;
+      position: relative;
+      &:first-child {
+        h3 {
+          margin-bottom: 11px;
+        }
+      }
+      &:nth-child(2) {
+        .content-logo {
+          margin-bottom: 23px;
+        }
+      }
+      &:nth-child(3) {
+        .content-logo {
+          margin-bottom: 53px;
+        }
+      }
+      .location {
+        margin-bottom: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1694px) {
+  .network {
+    .container{
+      max-width: 1694px;
+    }
+    .content-box {
+      padding: 79px 69px 86px 67px;
+      &:first-child {
+        h3 {
+          margin-bottom: 24px;
+        }
+      }
+      &:nth-child(2) {
+        h3 {
+          margin-bottom: 16px;
+        }
+      }
+      &:nth-child(3) {
+        h3 {
+          margin-bottom: 16px;
+        }
+      }
+      &:nth-child(4) {
+        h3 {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,164 @@
+.letter_image {
+  background-color: $header-color;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  
+    .letter-wrap {
+        position: relative;
+      &::before {
+        content: "";
+        @include absolute($top: -60px, $right: 0px);
+        width: 2px;
+        height: calc(100% + 120px);
+        background-color: $line-color;
+        animation: fades 5s;
+      }
+      @keyframes fades {
+        0%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+    }
+    .letter-wrapper{
+      position: relative;
+      top:-900px;
+      transition: all 0.75s ease-in-out 0.8s;
+    }
+    .left-letter {
+      width: 140px;
+      padding-right: 5px;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+
+      .text-anim {
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        transform: translateY(-50%);
+        color: $letter-text;
+        font-size: 1.5rem;
+        font-weight: $fw-thin;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        span {
+          opacity: 0;
+          @include anim-transition(all, 550ms);
+          @include anim-filter(blur, 25px);
+          @include anim-transform(translateZ, 0);
+          font-family: "robotothin" , sans-serif;
+        }
+        &.animate {
+          span {
+            opacity: 1;
+            @include anim-filter(blur, 0px);
+          }
+        }
+
+        $letters: 11; //Define number of letters in animation - including spaces
+        $timing: 50ms; //Delay between letters
+
+        //Sets timing differntly for each letter
+        @while $letters > 0 {
+          span:nth-child(#{$letters}) {
+            -webkit-transition-delay: $timing * $letters;
+            -moz-transition-delay: $timing * $letters;
+            -ms-transition-delay: $timing * $letters;
+            transition-delay: $timing * $letters;
+          }
+          $letters: $letters - 1;
+        }
+      }
+    }
+
+    .right-image {
+      width: 150px;
+      margin-bottom: 20px;
+      padding-left: 5px;
+      position: relative;
+      bottom:-900px;
+      transition: all 0.75s ease-in-out 0.8s;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  &.letter_down{
+   .container{
+    .letter-wrapper{
+      top: 0;
+    }
+    .right-image{
+      bottom: 0;
+    }
+   }
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .letter_image {
+    padding: 80px 0;
+
+    .container {
+      .left-letter {
+        width: 180px;
+
+        &::before {
+          @include absolute($top: -100px, $right: 0px);
+          height: 400px;
+        }
+
+        .text-anim {
+          left: -50px;
+          font-size: 2rem;
+        }
+      }
+
+      .right-image {
+        width: 180px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .letter_image {
+    padding: 255px 0 202px 0;
+
+    .container {
+      align-items: flex-start;
+      .left-letter {
+        width: 361px;
+        padding: 0 13px 0 11px;
+        margin-top: 106px;
+        &::before {
+          @include absolute($top: -214px, $right: 0);
+          height: 791px;
+        }
+        .text-anim {
+          left: -77px;
+          top: 50%;
+          font-size: 4.1rem;
+          letter-spacing: -4px;
+        }
+      }
+      .right-image {
+        width: 366px;
+        padding-left: 13px;
+      }
+    }
+  }
+}

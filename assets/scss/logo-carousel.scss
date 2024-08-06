@@ -1,0 +1,36 @@
+.logo-carousel {
+    background-color: $threecolumn-color;
+    padding: 40px 0;
+
+    .container {
+        .image-wrap {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+
+            img {
+                max-height: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1300px) {
+    .logo-carousel {
+        padding: 84px  0 115px 0;
+
+        .container{
+            .image-wrap {
+                display: block !important;
+                padding: 0;
+    
+                img {
+                    max-height: 73px;
+                    width: 176px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

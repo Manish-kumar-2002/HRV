@@ -1,0 +1,109 @@
+.sailboat-text.sailboat-block {
+    background-color: #9ca4b5;
+    .container {
+        @media screen and (min-width:992px) {
+            flex-wrap: wrap;
+            align-items: self-start;
+            padding: 144px 20px 200px;
+        }
+    }
+    .text-block {
+        h3 {
+            color: #041e4a;
+        }
+        p {
+            color: #041e4a;
+        }
+        @media screen and (min-width:992px) {
+            margin-right: 0;
+            padding-left: 0;
+            margin-left: 70px;
+            width: 47%;
+        }
+        @media screen and (min-width:1200px) {
+            padding-top: 33px;
+            width: 48%;
+        }
+        @media screen and (min-width:1300px) {
+            margin-left: 152px;
+            width: 40%;
+        }
+    }
+    .image-right-block {
+        width: 45%;
+        .image-wrap {
+            margin-bottom: 0px;
+        }
+        .contact2 {
+            color: white;
+            font-size: 2rem;
+            white-space: nowrap;
+            position: relative;
+            z-index: 1;
+            font-family: "robotobold",sans-serif;
+            transition: all 0.5s;
+            &:hover {
+                opacity: 0.5;
+            }
+            @media screen and (min-width:992px) {
+                font-size: 3.0rem;
+            }
+            @media screen and (min-width:1024) {
+                font-size: 3.5rem;
+            }
+            @media screen and (min-width:1200px) {
+                font-size: 4.8rem;
+            }
+        }
+        .icon-phone {
+            background-size: 500px 500px;
+            width: 24px;
+            height: 19px;
+            background-position: 0 -213px;
+            @media screen and (min-width:1200px) {
+                width: 40px;
+                height: 32px;
+                background-size: 500px 500px;
+                background-position: -127px -296px;
+            }
+            @media screen and (min-width:1300px) {
+                width: 48px;
+                height: 38px;
+                background-size: auto;
+                background-position: 0 -427px;
+            }
+        }
+        .contact-tag {
+            display: block;
+            color: #606c87;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            @media screen and (min-width:992px) {
+                font-size: 2.0rem;
+            }
+            @media screen and (min-width:1200px) {
+                font-size: 2.7rem;
+            }
+        }
+        .image {
+            clip-path: polygon(0% 100%, 100% -143%, 100% 100%, 0 1100%);
+            img {
+                clip-path: border-box;
+            }
+        }
+        .image-details {
+            background: #041e4a;
+            padding: 25px 50px 30px;
+            @media screen and (min-width:1024px) {
+                padding: 30px 50px 45px;
+            }
+            @media screen and (min-width:1200px) {
+                padding: 36px 50px 60px;
+            }
+        }
+    }
+    &::after {
+        clip-path: polygon(80% 0, 100% 0%, 100% 100%, 27% 100%);
+    }
+}

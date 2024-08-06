@@ -1,0 +1,176 @@
+.elements-with-text {
+    padding: 40px 0;
+    background-color: $threecolumn-color;
+
+    .elements-list {
+        display: flex;
+        flex-wrap: wrap;
+        li,li a {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 40px;
+            width: 33.3%;
+            text-align: center;
+            color: $header-color;
+            font-family: 'robotoregular' , sans-serif;
+            font-size: 1.4rem;
+        }
+        li a{
+            &:hover{
+                color: $text-color;
+            }
+        }
+    }
+
+    .icon-publishers {
+        background-size: 500px 500px;
+        width: 46px;
+        height: 37px;
+        background-position: 0 -264px;
+        margin-bottom: 10px;
+    }
+
+    .icon-tour {
+        background-size: 500px 500px;
+        width: 37px;
+        height: 35px;
+        background-position: 0 -309px;
+        margin-bottom: 12px;
+    }
+
+    .icon-service {
+        background-size: 500px 500px;
+        width: 51px;
+        height: 37px;
+        background-position: 0 -351px;
+        margin-bottom: 10px;
+    }
+
+    .icon-trade {
+        background-size: 500px 500px;
+        width: 35px;
+        height: 35px;
+        background-position: 0 -396px;
+        margin-bottom: 10px;
+    }
+
+    .icon-business {
+        background-size: 500px 500px;
+        width: 40px;
+        height: 35px;
+        background-position: 0 -439px;
+        margin-bottom: 11px;
+    }
+
+    .icon-shipping {
+        background-size: 500px 500px;
+        width: 42px;
+        height: 48px;
+        background-position: -77px 0;
+        margin-bottom: 0;
+    }
+
+    .right-text {
+        text-align: center;
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: #9ca4b5;
+        }
+
+        p {
+            color: $header-color;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .elements-with-text {
+        padding: 80px 0 50px;
+
+        .element-wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .elements-list {
+            padding-right: 20px;
+            width: 50%;
+        }
+
+        .right-text {
+            text-align: start;
+            width: 50%;
+            padding-left: 20px;
+        }
+    }
+}
+
+@media screen and (min-width:1300px) {
+    .elements-with-text {
+        padding: 168px 0 103px 0;
+
+        .element-wrap {
+            width: 1027px;
+            margin: 0 auto;
+        }
+
+        .elements-list {
+            max-width: 542px;
+            padding-left: 33px;
+            padding-right: 0;
+
+            li,li a {
+                font-size: 1.8rem;
+                margin-bottom: 66px;
+            }
+        }
+        .icon-trade,
+        .icon-business {
+            margin-bottom: 25px;
+        }
+        .icon-publishers{
+            margin-bottom: 24px;
+        }
+        .icon-shipping{
+            margin-bottom: 14px;
+        }
+        .icon-service{
+            margin-bottom: 24px;
+        }
+        .icon-trade{
+            margin-bottom: 23px;
+        }
+        .icon-tour{
+            margin-bottom: 27px;
+        }
+        .right-text {
+            margin-top: 17px;
+            padding-left: 130px;
+            h2 {
+                font-size: 4.8rem;
+                margin-bottom: 25px;
+            }
+
+            h3 {
+                font-size: 2.7rem;
+                margin-bottom: 32px;
+                letter-spacing: 1.2px;
+            }
+
+            p {
+                font-size: 1.6rem;
+                letter-spacing: -0.1px;
+                line-height: 1.3;
+            }
+        }
+    }
+}

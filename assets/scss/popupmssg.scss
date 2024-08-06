@@ -1,0 +1,167 @@
+.popup-wrap-block {
+    display: none;
+    width: 300px;
+    margin: 0 auto;
+    background: #ced2da;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    .wir-tag , .lieber-tag  {
+        display: block;
+        color: #0a1f46;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        @media screen and (min-width:768px) {
+            font-size: 2.0rem;
+        }
+        @media screen and (min-width:992px) {
+            margin-bottom: 20px;
+            font-size: 2.3rem;
+        }
+        @media screen and (min-width:1200px) {
+            font-size: 2.7rem;
+            margin-bottom: 27px;
+        }
+    }
+    .lieber-tag {
+        @media screen and (min-width:1200px) {
+            margin-bottom: 20px;
+        }
+    }
+    .icon-phone {
+        background-size: 500px 500px;
+        width: 24px;
+        height: 19px;
+        background-position: 0 -213px;
+        margin-right: 5px;
+        @media screen and (min-width:992px) {
+            width: 40px;
+            height: 32px;
+            background-size: 500px 500px;
+            background-position: -127px -296px;
+        }
+
+    }
+    .contact2 {
+        white-space: nowrap;
+        position: relative;
+        z-index: 1;
+        font-family: "robotobold",sans-serif;
+        font-size: 2.0rem;
+        color: #f3f4f6;
+        background: #9ca4b5;
+        padding: 0 10px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        height: 100%;
+        @media screen and (min-width:768px) {
+            font-size: 2.9rem;
+        }
+        @media screen and (min-width:992px) {
+            font-size: 3.3rem;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width:1200px) {
+            font-size: 4.0rem;
+            margin-bottom: 44px;
+        }
+    }
+    .form-group {
+        margin-bottom: 10px;
+        height: 37px;
+        ::placeholder {
+            color: #58606d;
+        }
+        input {
+            padding: 10px;
+            color: #58606d;
+            font-size: 1rem;
+            &:focus {
+                box-shadow: none;
+                border: none;
+                outline: none;
+            }
+            @media screen and (min-width:768px) {
+                font-size: 1.4rem;
+                padding: 12px;
+            }
+            @media screen and (min-width:992px) {
+                font-size: 1.6rem;
+                padding: 16px;
+            }
+            @media screen and (min-width:1200px) {
+                padding: 18px;
+            }
+        }
+    }
+    .bevorzugteszeitfenster {
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        border: none;
+        color: #58606d; 
+        -webkit-appearance: none;
+        option {
+            color: #58606d;  
+        }
+        @media screen and (min-width:768px) {
+            font-size: 1.4rem;
+            padding: 12px;
+        }
+        @media screen and (min-width:992px) {
+            font-size: 1.6rem;
+            padding: 16px;
+        }
+        @media screen and (min-width:1200px) {
+            padding: 18px;
+        }
+    } 
+    .btn-submit {
+        width: 100%;
+        font-size: 1.2rem;
+        transition: all 0.7s;
+        &:hover {
+            background-color: #041e4a;
+            border: 1px solid #606c87;
+            color: #fff;
+        }
+        @media screen and (min-width:768px) {
+            font-size: 1.6rem;
+        }
+        @media screen and (min-width:992px) {
+            padding: 25px 30px;
+        }
+        @media screen and (min-width:1200px) {
+            font-size: 2.0rem;
+            padding: 30px 50px;
+        }
+    }
+    @media screen and (min-width:768px) {
+        width: 350px;
+    }
+    @media screen and (min-width:992px) {
+        width: 400px;
+    }
+    @media screen and (min-width:1200px) {
+        width: 530px;
+        padding: 70px 30px;
+    }
+}
+.bg-black {
+    content: "";
+    display: none;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+    z-index: 100;
+}

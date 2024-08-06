@@ -1,0 +1,111 @@
+.news-detail {
+  background-color: #ced2da;
+  padding: 90px 0 40px;
+  position: relative;
+  .right-block {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    position: absolute;
+    height: 100%;
+    pointer-events: none;
+    clip-path: polygon(66% 0, 100% 0%, 100% 100%, 0% 106%);
+    background: url(../images/yatch.jpg) left 65% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 50%;
+    opacity: 0;
+  }
+  
+  .date-block {
+    color: #fff;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: $fw-medium;
+  }
+  .icon-calander{
+    background-position: -77px -250px;
+	background-size: 500px 500px;
+	width: 14px;
+	height: 16px;
+    margin-right: 4px;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: $fw-regular;
+  }
+  p {
+    color: #041e4a;
+    margin-bottom: 15px;
+  }
+  .btn {
+    background-color: #0a1f46;
+    width: 145px;
+    &:hover{
+      background-color: transparent;
+
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .news-detail {
+    padding: 110px 0 60px;
+    .container {
+      display: flex;
+    }
+    h2{
+        font-size: 3.5rem;
+    }
+    .left-block {
+      width: 50%;
+    }
+    .right-block {
+      opacity: 1;
+    }
+    .date-block {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .news-detail {
+    padding: 216px 0 232px;
+    .date-block {
+      margin-bottom: 38px;
+    }
+    h2 {
+      font-size: 4.8rem;
+      margin-bottom: 26px;
+    }
+    h3 {
+      font-size: 2.7rem;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 1.6rem;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .left-block {
+      padding-right: 50px;
+    }
+    .btn {
+      margin-top: 30px;
+      font-size: 20px;
+      padding: 23px 10px;
+    }
+    .right-block{
+      background-position: 100% 44%;
+        img{
+            object-position: right;
+        }
+    }
+  }
+}

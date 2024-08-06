@@ -1,0 +1,275 @@
+.text-with-image-2 {
+  padding: 80px 0 40px;
+  background-color: $threecolumn-color;
+  position: relative;
+
+  .left-text {
+    h2 {
+      color: $text-color;
+      font-weight: $fw-light;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    h3 {
+      color: $header-color;
+      font-size: 1.6rem;
+      font-weight: $fw-regular;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .bullet {
+      display: inline-block;
+      font-weight: $fw-medium;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: $heading-color;
+      position: relative;
+      padding-left: 25px;
+
+     &::after{
+      content: '';
+      background: url(../images/bullet.png);
+      width: 18px;
+      height: 10px;
+      top: 4px;
+      left: 0;
+      position: absolute;
+     }
+    }
+  }
+  
+  .btn {
+    background-color: #041e4a;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid #041e4a;
+      color: #041e4a;
+    }
+  }
+
+  .image-right {
+    @include absolute($top: 0, $right: 0);
+    height: 100%;
+    pointer-events: none;
+    background-size: cover;
+    width: 280px;
+    opacity: 0.6;
+  }
+  .text-box {
+    h3 {
+      color: #9ca4b5;
+      text-transform: uppercase;
+      @include fontsize(24px);
+      font-weight: $fw-medium;
+    }
+    p {
+      color: #58606d;
+      b {
+        color: #041e4a;
+      }
+    }
+    strong {
+      font-weight: $fw-medium;
+    }
+    &:first-child {
+      margin-bottom: 50px;
+    }
+  }
+  .right-block {
+    @include absolute($top: 0, $right: 0);
+    height: 100%;
+    pointer-events: none;
+    clip-path: polygon(90% 0, 100% 0, 100% 100%, 37% 100%);
+    background: url(../images/sea-image.jpg) left 65% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 280px;
+    display: none;
+  }
+  &.text2 {
+    .image-right {
+      background: url(../images/rope-1.png) 114% 84% no-repeat;
+      background-attachment: fixed;
+      background-size: 50vw;
+      display: none;
+    }
+    .left-text {
+      .bullet {
+        font-family: "robotomedium", sans-serif;
+        position: relative;
+      }
+    }
+    h4 {
+      font-family: "robotoregular", sans-serif;
+    }
+  }
+}
+.listing {
+  margin-bottom: 20px;
+
+  li {
+    font-size: 1.4rem;
+    color: $heading-color;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    font-family: "robotolight", sans-serif;
+    .highlight {
+      font-family: "robotomedium", sans-serif;
+    }
+    
+    &::after {
+      content: "";
+      background: url(../images/bullet.png);
+      width: 18px;
+      height: 10px;
+      top: 4px;
+      left: 0;
+      position: absolute;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .text-with-image-2 {
+    padding: 110px 0 60px;
+
+    .left-text {
+      width: 400px;
+      margin: 0 auto;
+
+      h2 {
+        font-size: 3rem;
+      }
+    }
+    .left-block {
+      width: 50%;
+    }
+    .right-block {
+      width: calc(50% + 78px);
+      right: 0;
+      top: 0;
+      height: 100%;
+      clip-path: polygon(79% 0, 100% 0%, 100% 100%, 12% 100%);
+      display: block;
+    }
+    .text-box {
+      h3 {
+        font-size: 2.7rem;
+      }
+    }
+    .container {
+      display: flex;
+    }
+    .image-right {
+      @include absolute($top: 0, $right: 0);
+      width: 50%;
+      opacity: 1;
+      clip-path: polygon(90% 0, 100% 0, 100% 100%, 37% 100%);
+      background: url(../images/craft.png) bottom right no-repeat;
+      background-size: 96%;
+      background-attachment: fixed;
+    }
+    &.text2 {
+      .image-right {
+        display: block;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1300px) {
+  .text-with-image-2 {
+    padding: 187px 0 219px 0;
+
+    .left-text {
+      width: 600px;
+      margin: 0 auto 0 154px;
+      h2 {
+        font-size: 4.8rem;
+        margin-bottom: 27px;
+      }
+      h3 {
+        font-size: 2.7rem;
+        letter-spacing: 1.2px;
+        margin-bottom: 42px;
+      }
+    }
+
+    .listing {
+      li {
+        font-size: 1.6rem;
+        letter-spacing: -0.1px;
+        margin-bottom: 22px;
+        padding-left: 34px;
+        width: 465px;
+        .highlight {
+          letter-spacing: 0.2px;
+        }
+      }
+    }
+
+    .btn {
+      min-width: 335px;
+      font-size: 2rem;
+      padding: 23px 0;
+      margin-top: 20px;
+    }
+
+    .image-right {
+      width: 63%;
+      clip-path: polygon(73% 0, 100% 0, 100% 100%, 32.73% 100%);
+    }
+    .left-block {
+      padding-right: 50px;
+      h3 {
+        letter-spacing: 2px;
+      }
+    }
+    .right-block {
+      background-position: 100% 22%;
+      background-size: 59% 175%;
+    }
+    &.text2 {
+      padding: 184px 0 155px 0;
+      .image-right {
+        background-position: 101% 51%;
+        background-size: 44%;
+      }
+      .left-text {
+        width: 456px;
+
+        h2 {
+          margin-bottom: 35px;
+        }
+
+        .bullet {
+          font-size: 1.6rem;
+          margin-bottom: 31px;
+        }
+
+        h4 {
+          font-size: 2.8rem;
+          letter-spacing: 0.5px;
+          margin-bottom: 19px;
+        }
+        .listing {
+          margin-bottom: 31px;
+          li {
+            padding-left: 29px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    .right-block {
+      clip-path: polygon(79% 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+  .listing {
+    li {
+      padding-left: 43px;
+      font-size: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+// Border-Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;          
+}
+// Transition
+@mixin transition($time){
+   -webkit-transition: $time;
+      -moz-transition: $time;
+       -ms-transition: $time;
+        -o-transition: $time;
+           transition: $time;
+}
+// animation
+@mixin anim-filter($filter, $value) {
+  -webkit-filter: #{$filter}unquote("(#{$value})");
+    -moz-filter: #{$filter}unquote("(#{$value})");
+    -ms-filter: #{$filter}unquote("(#{$value})");
+    filter: #{$filter}unquote("(#{$value})"); 
+}
+@mixin anim-transition($property, $value) {
+-webkit-transition: $property, $value;
+    -moz-transition: $property, $value;
+    -ms-transition: $property, $value;
+    transition: $property, $value;
+}
+@mixin anim-transform($property, $value) {
+  -webkit-transform:  #{$property}unquote("(#{$value})");
+    -moz-transform: #{$property}unquote("(#{$value})");
+    -ms-transform: #{$property}unquote("(#{$value})");
+    transform: #{$property}unquote("(#{$value})"); 
+}
+
+//  Transform
+@mixin transform($val){
+   -webkit-transform: $val;
+   -moz-transform: $val;
+   -ms-transform: $val;
+   -o-transform: $val;
+   transform: $val;
+}
+
+// Positon-absolute
+@mixin absolute ($top:auto, $right:auto, $bottom:auto, $left:auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+// Positon-fixed
+@mixin fixed ($top:auto, $right:auto, $bottom:auto, $left:auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: fixed;
+}
+//  Border
+ @mixin border ($border-width, $border-style, $border-color){
+   border: $border-width $border-style $border-color;   
+ }
+//  Mixin for after and before
+@mixin after($width, $height){
+   content: '';
+   width: $width;
+   height: $height;
+}
+ //font size
+ @function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+@mixin fontsize($size) {   
+  font-size: calculateRem($size);
+} 
+//Single side border
+ @mixin border-top ($border-width, $border-style, $border-color){
+   border-top: $border-width $border-style $border-color;
+  }
+ @mixin border-right ($border-width, $border-style, $border-color){   
+   border-right: $border-width $border-style $border-color;   
+ }
+ @mixin border-bottom ($border-width, $border-style, $border-color){  
+   border-bottom: $border-width $border-style $border-color;  
+ }
+ @mixin border-left ($border-width, $border-style, $border-color){  
+   border-left: $border-width $border-style $border-color;   
+ }
+
+

@@ -1,0 +1,129 @@
+.banner-wrap-block {
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    img {
+        z-index: -1;
+        display: block;
+        @media screen and (min-width: 768px) { 
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .container {
+        padding: 0;
+        @media screen and (min-width: 768px) {
+            padding: 0 20px;
+        }
+    }
+    .banner-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $humburger-color;
+        padding: 20px;
+        .banner-block-details {
+            @media screen and (min-width:768px) {
+                margin-left: auto;
+            }
+            @media screen and (min-width:1200px) {
+                padding: 26px 28px 37px;
+            }
+        }
+        h1 {
+            color: $white;
+            font-size: 2rem;
+            @media screen and (min-width:992px) {
+                font-size: 3.0rem;
+            }
+            @media screen and (min-width:1024px) {
+                font-size: 4.8rem;
+            }
+            @media screen and (min-width:1200px) {
+                margin-bottom: 38px;
+                word-spacing: 9px;
+            }
+        }
+        p {
+            color: $header-color;
+            @media screen and (min-width:992px) {
+                font-size: 1.6rem;
+            }
+            @media screen and (min-width:1200px) {
+                margin-bottom: 26px;
+            }
+        }
+        .listing-block {
+            li {
+                position: relative;
+                color: $header-color;
+                &::after {
+                    content: "";
+                    background: url('../images/sprite.png') no-repeat -143px -17px;
+	                background-size: 500px 500px;
+	                width: 17px;
+	                height: 9px;
+                    top: 4px;
+                    left: 0;
+                    position: absolute;
+                }
+                @media screen and (min-width:992px) {
+                    font-size: 1.6rem;
+                }
+                &:first-child {
+                    margin-bottom: 21px;
+                }
+            }
+            @media screen and (min-width:1200px) {
+                margin-bottom: 39px;
+            }
+        }
+        .inquiry {
+            width: 100%;
+            @media screen and (min-width:768px) {
+                width: auto;
+            }
+            @media screen and (min-width:992px) {
+                font-size: 2.0rem;
+                padding: 15px;
+            }
+            @media screen and (min-width:1200px) {
+                padding: 21px 31px;
+            }
+        }
+        @media screen and (min-width: 768px){
+            clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+            width: 70%;
+            margin-left: auto;
+        }
+        @media screen and (min-width:992px) {
+            width: 60%;
+        }
+        @media screen and (min-width:1200px) {
+            clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0% 100%);
+            min-height: 547px;
+            align-items: initial;
+            justify-content: initial;
+        }
+    }
+    @media screen and (min-width:768px) {
+        min-height: 500px;
+        flex-direction: initial;
+    }
+    @media screen and (min-width: 992px) {
+        min-height: 600px;
+    }
+    @media screen and (min-width:1024px) {
+        min-height: 800px;
+    }
+    @media screen and (min-width:1200px) {
+        min-height: 895px;
+    }
+}
